@@ -25,49 +25,135 @@
         android:layout_height="0dp"
         app:columnCount="4"
         app:rowCount="5"
-        android:background="@color/grid_background_color"
-
         android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/display">
 
+        <!-- Digits 0-9 -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_0"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="4dp"
+            style="@style/CalculatorButton"
             android:text="0"
-            android:textColor="@color/button_text_color"
-            android:textSize="24sp"
-            app:backgroundTint="@color/button_background_color"
-            app:cornerRadius="8dp"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_rowWeight="1"
-            app:strokeColor="@color/button_stroke_color"
-            app:strokeWidth="2dp" />
+            app:layout_column="0"
+            app:layout_row="4"
+            app:layout_columnSpan="2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="4dp"
+            style="@style/CalculatorButton"
             android:text="1"
-            android:textColor="@color/button_text_color"
-            android:textSize="24sp"
-            app:backgroundTint="@color/button_background_color"
-            app:cornerRadius="8dp"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_rowWeight="1"
-            app:strokeColor="@color/button_stroke_color"
-            app:strokeWidth="2dp" />
+            app:layout_column="0"
+            app:layout_row="3" />
 
-        <!-- Add more buttons similarly and modify their attributes as needed -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_2"
+            style="@style/CalculatorButton"
+            android:text="2"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_3"
+            style="@style/CalculatorButton"
+            android:text="3"
+            app:layout_column="2"
+            app:layout_row="3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_4"
+            style="@style/CalculatorButton"
+            android:text="4"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_5"
+            style="@style/CalculatorButton"
+            android:text="5"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_6"
+            style="@style/CalculatorButton"
+            android:text="6"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_7"
+            style="@style/CalculatorButton"
+            android:text="7"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_8"
+            style="@style/CalculatorButton"
+            android:text="8"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_9"
+            style="@style/CalculatorButton"
+            android:text="9"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <!-- Decimal point -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_decimal"
+            style="@style/CalculatorButton"
+            android:text="."
+            app:layout_column="2"
+            app:layout_row="4" />
+
+        <!-- Clear button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_clear"
+            style="@style/CalculatorButton"
+            android:text="C"
+            app:layout_column="3"
+            app:layout_row="0" />
+
+        <!-- Basic arithmetic operators -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add"
+            style="@style/CalculatorButton"
+            android:text="+"
+            app:layout_column="3"
+            app:layout_row="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_subtract"
+            style="@style/CalculatorButton"
+            android:text="-"
+            app:layout_column="3"
+            app:layout_row="2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_multiply"
+            style="@style/CalculatorButton"
+            android:text="×"
+            app:layout_column="3"
+            app:layout_row="3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_divide"
+            style="@style/CalculatorButton"
+            android:text="÷"
+            app:layout_column="3"
+            app:layout_row="4" />
 
     </androidx.gridlayout.widget.GridLayout>
+
+
+
+    <!-- Add more buttons similarly and modify their attributes as needed -->
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/mic_button"
