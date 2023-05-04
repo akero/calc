@@ -19,12 +19,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <GridLayout
+    <androidx.gridlayout.widget.GridLayout
         android:id="@+id/button_grid"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:columnCount="4"
-        android:rowCount="5"
+        app:columnCount="4"
+        app:rowCount="5"
+        android:background="@color/grid_background_color"
+
         android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,6 +39,23 @@
             android:layout_height="0dp"
             android:layout_margin="4dp"
             android:text="0"
+            android:textColor="@color/button_text_color"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_background_color"
+            app:cornerRadius="8dp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1"
+            app:strokeColor="@color/button_stroke_color"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:text="1"
+            android:textColor="@color/button_text_color"
             android:textSize="24sp"
             app:backgroundTint="@color/button_background_color"
             app:cornerRadius="8dp"
@@ -48,14 +67,13 @@
 
         <!-- Add more buttons similarly and modify their attributes as needed -->
 
-
-    </GridLayout>
+    </androidx.gridlayout.widget.GridLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/mic_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_microphone"
+        android:src="@drawable/mic_icon"
         app:backgroundTint="@color/accent_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
